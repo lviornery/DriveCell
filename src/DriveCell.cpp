@@ -192,6 +192,18 @@ void DriveCell::Buzz(uint16_t us_buzz) {
   }
 }
 
+void DriveCell::Drive(bool direction) {
+  /*For motors - set the driving 'direction' (forward/reverse)*/
+  /*For coils - set the polarity 'direction' (north/south)*/
+  if (direction) {
+    digitalWrite(_IN1, LOW);
+    digitalWrite(_IN2, HIGH);
+  } else {
+    digitalWrite(_IN2, LOW);
+    digitalWrite(_IN1, HIGH);
+  }
+}
+
 
 void DriveCell::Pulse(bool direction, uint8_t ms_duration) {
   /*Crteate a short Pulse for 'ms_duration'*/
