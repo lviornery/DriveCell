@@ -115,6 +115,13 @@ void DriveCell::Drive(bool direction, uint8_t power_percent) {
   }
 }
 
+void DriveCell::Stop() {
+  /*For motors - stop the motor*/
+  /*For coils - depower the coil*/
+  ledcWrite(_IN1, 0U);
+  ledcWrite(_IN2, 0U);
+}
+
 void DriveCell::Pulse(bool direction, uint8_t ms_duration) {
   /*Crteate a short Pulse for 'ms_duration'*/
   if (direction) {
@@ -204,6 +211,12 @@ void DriveCell::Drive(bool direction) {
   }
 }
 
+void DriveCell::Stop() {
+  /*For motors - stop the motor*/
+  /*For coils - depower the coil*/
+  digitalWrite(_IN1, LOW);
+  digitalWrite(_IN2, LOW);
+}
 
 void DriveCell::Pulse(bool direction, uint8_t ms_duration) {
   /*Crteate a short Pulse for 'ms_duration'*/
