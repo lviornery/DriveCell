@@ -39,7 +39,7 @@ public:
   void Init();
   void Run( uint16_t flip_speed_ms);
   void Buzz(uint16_t us_buzz);
-  void Drive(bool direction, uint8_t power_percent);
+  void Drive(bool direction);
   void Pulse(bool direction, uint8_t ms_duration);
   void Tone();
   void Toggle();
