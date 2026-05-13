@@ -59,8 +59,22 @@ Below are the functions provided by the `DriveCell` library. Basic functions wor
      ```cpp
      myDriveCell.Drive(true, 75);  // Drive forward at 75% power
      ```
+   - **Function for Other Arduino Devices:** `Drive(bool direction)`
+   - **Description for Other Arduino Devices:** Runs the motor or actuator in the specified direction.
+   - **Examples:**
+     ```cpp
+     myDriveCell.Drive(true);  // Drive forward
+     ```
 
-#### 5. **Pulse**
+#### 5. **Stop**
+   - **Function:** `Stop()`
+   - **Description:** Stops motor or actuator. 
+   - **Examples:**
+     ```cpp
+     myDriveCell.Stop();  // Stops motor
+     ```
+
+#### 6. **Pulse**
    - **Function:** `Pulse(bool direction, uint8_t ms_duration)`
    - **Description:** Creates a short pulse in the specified polarity for the given duration.
    - **Example for All Devices:**
@@ -68,7 +82,7 @@ Below are the functions provided by the `DriveCell` library. Basic functions wor
      myDriveCell.Pulse(true, 10);  // Pulse forward for 10 milliseconds
      ```
 
-#### 6. **Tone**
+#### 7. **Tone**
    - **Function:** `Tone()`
    - **Description:** Plays a tone by continuously toggling the motor state with varying frequencies.
    - **Example for All Devices:**
@@ -76,7 +90,7 @@ Below are the functions provided by the `DriveCell` library. Basic functions wor
      myDriveCell.Tone();  // Play a tone with varying frequencies
      ```
 
-#### 7. **Toggle**
+#### 8. **Toggle**
    - **Function for ESP32:** `Toggle(uint8_t power_percent)`
    - **Description for ESP32:** Toggles polarity or motor direction at a specified duty cycle using PWM.
    - **Examples:**
