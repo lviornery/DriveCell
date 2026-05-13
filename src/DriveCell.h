@@ -22,6 +22,7 @@ public:
   void Run(bool smooth, uint8_t power_percent, uint16_t flip_speed_ms);
   void Buzz(uint16_t us_buzz);
   void Drive(bool direction, uint8_t power_percent);
+  void Stop();
   void Pulse(bool direction, uint8_t ms_duration);
   void Tone();
   void Toggle(uint8_t power_percent);
@@ -40,6 +41,7 @@ public:
   void Run( uint16_t flip_speed_ms);
   void Buzz(uint16_t us_buzz);
   void Drive(bool direction);
+  void Stop();
   void Pulse(bool direction, uint8_t ms_duration);
   void Tone();
   void Toggle();
